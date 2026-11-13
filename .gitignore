@@ -1,4 +1,9 @@
 .DS_Store
 *.o
 *.dSYM/
-/Pset1/credit
+/Pset1/credit/credit
+/Pset1/cash/cash
+/Pset1/world/hello
+/Pset1/me/hello
+/Pset1/mario-less/mario
+/Pset1/mario-more/mario
