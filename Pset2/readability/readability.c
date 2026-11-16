@@ -28,19 +28,20 @@ int main(void)
 
     //题目提供的公式
     double index = 0.0588 * L - 0.296 * S - 15.8;
+    int grade = (int) round(index);
 
-    if (index < 1)
+    if (grade < 1)
     {
         printf("Before Grade 1\n");
     }
-    else if (index > 16)
+    else if (grade >= 16)
     {
         printf("Grade 16+\n");
     }
     else
     {
         //round函数四舍五入，具体用法自行查阅
-        printf("Grade %d\n", (int)round(index));
+        printf("Grade %d\n", grade);
     }
 
     return 0;
@@ -78,11 +79,8 @@ void calculate(string text, double *pL, double *pS)
         }
     }
     
-    //最后一个单词不会被计数，因此当输入不是空白时加上
-    if (count_letter != 0)
-    {
-        count_word++;
-    }
+    //最后一个单词不会被计数，因此加上
+    count_word++;
 
     *pL = ((count_letter / count_word) * 100);
     *pS = ((count_sentence / count_word) * 100);
