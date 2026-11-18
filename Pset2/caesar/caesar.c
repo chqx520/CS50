@@ -9,7 +9,7 @@
     提示用户输入明文
     处理，输出密文
 */
-void swap(const string ptext, string ctext, int len, int key);
+void encode(const string ptext, string ctext, int len, int key);
 
 int main(int argc, string argv[])
 {
@@ -47,7 +47,7 @@ int main(int argc, string argv[])
 }
 
 //接收明文和key，转化的结果存进ctext数组
-void swap(const string ptext, string ctext, int len, int key)
+void encode(const string ptext, string ctext, int len, int key)
 {
     for (int i = 0; ptext[i] != '\0'; i++)
     {
